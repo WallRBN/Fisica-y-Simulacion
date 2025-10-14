@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
   <style>
-    /* ----------- Estilo base ----------- */
     body {
       background: radial-gradient(circle at 20% 20%, #3b2b20 0%, #1b130d 100%);
       color: #f0e0c0;
@@ -15,7 +14,6 @@
       overflow-x: hidden;
       background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
     }
-
     header {
       text-align: center;
       padding: 3rem 1rem;
@@ -24,7 +22,6 @@
       position: relative;
       box-shadow: 0 0 40px rgba(200,157,88,0.4);
     }
-
     header::after {
       content: "⚙️⚙️⚙️";
       position: absolute;
@@ -35,7 +32,6 @@
       color: #c89d58;
       text-shadow: 0 0 8px #7a5520;
     }
-
     h1 {
       font-family: 'UnifrakturCook', cursive;
       font-size: 3.5rem;
@@ -43,12 +39,7 @@
       text-shadow: 2px 2px 5px #000, 0 0 10px #7a5520;
       letter-spacing: 2px;
     }
-
-    .lead {
-      color: #d6c2a0;
-      font-size: 1.3rem;
-    }
-
+    .lead { color: #d6c2a0; font-size: 1.3rem; }
     nav {
       background: linear-gradient(90deg, #2a1c10, #3b2b20);
       border-bottom: 2px solid #c89d58;
@@ -57,7 +48,6 @@
       z-index: 10;
       box-shadow: 0 0 10px rgba(200,157,88,0.3);
     }
-
     nav a {
       color: #c89d58 !important;
       font-weight: 600;
@@ -65,12 +55,7 @@
       letter-spacing: 1px;
       font-family: 'Special Elite', cursive;
     }
-
-    nav a:hover {
-      color: #fff3d0 !important;
-      text-shadow: 0 0 8px #c89d58;
-    }
-
+    nav a:hover { color: #fff3d0 !important; text-shadow: 0 0 8px #c89d58; }
     h2 {
       text-align: center;
       color: #e0c080;
@@ -80,8 +65,7 @@
       letter-spacing: 3px;
       font-size: 2.5rem;
     }
-
-    .video-card {
+    .video-card, .image-card {
       border-radius: 10px;
       overflow: hidden;
       background: linear-gradient(180deg, #3a2a1b 0%, #2a1a0f 100%);
@@ -90,13 +74,11 @@
       transition: all 0.3s ease;
       position: relative;
     }
-
-    .video-card:hover {
+    .video-card:hover, .image-card:hover {
       transform: translateY(-5px) scale(1.02);
       box-shadow: 0 0 35px rgba(200,157,88,0.7);
     }
-
-    .video-card::before {
+    .video-card::before, .image-card::before {
       content: "⚙️";
       position: absolute;
       top: 8px;
@@ -105,7 +87,6 @@
       color: #c89d58;
       opacity: 0.8;
     }
-
     iframe {
       width: 100%;
       height: 220px;
@@ -113,7 +94,12 @@
       border-radius: 0.3rem 0.3rem 0 0;
       filter: sepia(0.3) contrast(1.2);
     }
-
+    .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: contrast(1.05) saturate(1.1);
+    }
     footer {
       background: #1e140a;
       padding: 2.5rem 0;
@@ -124,38 +110,27 @@
       font-family: 'Special Elite', cursive;
       background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
     }
-
-    footer a {
-      color: #d4a94f;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-      color: #fff3d0;
-    }
-
+    footer a { color: #d4a94f; text-decoration: none; font-weight: 600; }
+    footer a:hover { text-decoration: underline; color: #fff3d0; }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    .video-card {
-      animation: fadeInUp 0.6s ease forwards;
-    }
+    .video-card, .image-card { animation: fadeInUp 0.6s ease forwards; }
   </style>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#"> J.E. Vázquez </a>
+      <a class="navbar-brand" href="#">J.E. Vázquez</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#modelado">Modelado 3D</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -172,7 +147,7 @@
   </header>
 
   <main id="proyectos" class="container py-5">
-    <h2> Proyectos y Animaciones </h2>
+    <h2>Proyectos y Animaciones</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
       <div class="col"><div class="video-card"><iframe src="https://www.youtube.com/embed/zvCj5c2dcaE" allowfullscreen></iframe></div></div>
       <div class="col"><div class="video-card"><iframe src="https://www.youtube.com/embed/E0w6Tu62Z04" allowfullscreen></iframe></div></div>
@@ -188,6 +163,19 @@
       <div class="col"><div class="video-card"><iframe src="https://www.youtube.com/embed/4EDCx_Y8LMk" allowfullscreen></iframe></div></div>
     </div>
   </main>
+
+  <!-- NUEVA SECCIÓN DE MODELADO -->
+  <section id="modelado" class="container py-5">
+    <h2>Modelado 3D y Texturizado</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col"><div class="image-card"><img src="Modelo.png" alt="Modelo base humanoide JEVF"></div></div>
+      <div class="col"><div class="image-card"><img src="Dragon_JEVF_Screenshot_Texturas_1.png" alt="Dragón - vista frontal"></div></div>
+      <div class="col"><div class="image-card"><img src="Dragon_JEVF_Screenshot_Texturas_2.png" alt="Dragón - vista lateral"></div></div>
+      <div class="col"><div class="image-card"><img src="Dragon_JEVF_Render_Texturas_1.png" alt="Render Dragón 1"></div></div>
+      <div class="col"><div class="image-card"><img src="Dragon_JEVF_Render_Texturas_2.png" alt="Render Dragón 2"></div></div>
+      <div class="col"><div class="image-card"><img src="Dragon_JEVF_Render_Texturas_3.png" alt="Render Dragón 3"></div></div>
+    </div>
+  </section>
 
   <footer id="contacto">
     <p>© 2025 Jesús Eduardo Vázquez Flores | ITIAD</p>
